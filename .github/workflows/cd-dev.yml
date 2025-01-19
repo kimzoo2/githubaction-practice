@@ -1,0 +1,11 @@
+name: CD-dev
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+       - name: echo vars
+         run: echo ${{ vars.TEST_STRING}}
